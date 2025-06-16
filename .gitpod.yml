@@ -1,6 +1,7 @@
 image: gitpod/workspace-full:latest
 
 tasks:
+  - init: sudo apt-get update && sudo apt-get install -y git
   - command: npx live-server --port=3000 --no-browser
 
 ports:
