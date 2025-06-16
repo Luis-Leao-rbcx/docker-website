@@ -1,9 +1,8 @@
- image:
-   file: .gitpod.Dockerfile
- tasks:
-   - init: npm install
-     command: npm start
- ports:
-   - port: 80
-     onOpen: open-preview
-
+image:
+  file: .gitpod.Dockerfile
+tasks:
+  - init: apt-get update && apt-get install -y git
+command: npm start
+ports:
+  - port: 80
+    onOpen: open-preview
